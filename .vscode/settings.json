@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "FBLA Game 2024-25.sln"
+    "dotnet.defaultSolution": "FBLA-Game-2024-25.sln"
 }
