@@ -16253,6 +16253,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1023303, y: 0.63915026}
   m_EdgeRadius: 0
+--- !u!114 &1678784469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678784460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0547edadfa7c3864ca86316e8ab1f4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {fileID: 1294208462}
+  pointB: {fileID: 1683651657}
+  speed: 2
 --- !u!1 &1683651657
 GameObject:
   m_ObjectHideFlags: 0
@@ -16277,7 +16292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683651657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.56, y: 3.33, z: 0.007790195}
+  m_LocalPosition: {x: 0.56, y: 3.47, z: 0.007790195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16919,7 +16934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5128430773975407773, guid: 426c788d3a678f2428060a8efdddbd8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.26
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 5128430773975407773, guid: 426c788d3a678f2428060a8efdddbd8d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16982,6 +16997,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6361028029670110499, guid: 426c788d3a678f2428060a8efdddbd8d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1678784466}
+    - targetCorrespondingSourceObject: {fileID: 6361028029670110499, guid: 426c788d3a678f2428060a8efdddbd8d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1678784469}
     - targetCorrespondingSourceObject: {fileID: 332375669563886766, guid: 426c788d3a678f2428060a8efdddbd8d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 834574175}
