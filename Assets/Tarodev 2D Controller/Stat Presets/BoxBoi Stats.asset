@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   ClimbableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   LadderLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   SnapInput: 1
   VerticalDeadzoneThreshold: 0.3
   HorizontalDeadzoneThreshold: 0.1
@@ -71,7 +71,7 @@ MonoBehaviour:
   DashDurationFrames: 5
   DashCooldown: 1.5
   DashEndHorizontalMultiplier: 0.25
-  AllowAttacks: 0
+  AllowAttacks: 1
   AttackFrameCooldown: 15
   ExternalVelocityDecay: 100
   ShowWallDetection: 1
