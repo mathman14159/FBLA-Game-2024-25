@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   ClimbableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   LadderLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   SnapInput: 1
   VerticalDeadzoneThreshold: 0.3
   HorizontalDeadzoneThreshold: 0.1
