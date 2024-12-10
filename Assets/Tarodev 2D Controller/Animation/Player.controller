@@ -290,7 +290,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Climb
-  m_Speed: 1
+  m_Speed: 0.66
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -302,7 +302,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0d9e04e15c4fcd54992be1dfc1dc0ce9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2ec07edd95800d044b16f2dd0c718a77, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
