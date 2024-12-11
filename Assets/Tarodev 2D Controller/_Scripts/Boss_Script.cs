@@ -20,7 +20,7 @@ public class Boss_Script : MonoBehaviour
     {
         
     }
-    void TakeDamage(int amount)
+    public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         if (currentHealth <= 0)

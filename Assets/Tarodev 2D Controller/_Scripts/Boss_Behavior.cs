@@ -22,7 +22,7 @@ public class Boss_Behavior : MonoBehaviour
         currentHealth = BossHealth;
         BossHealth = BossScore.instance.currentBossScore;
     }
-    void TakeDamage(int amount)
+    public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         if (currentHealth <= 0)

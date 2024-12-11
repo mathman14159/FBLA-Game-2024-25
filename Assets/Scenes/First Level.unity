@@ -52668,6 +52668,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2314258916197942899, guid: b7739da86bca22345839e08003880b16, type: 3}
   m_PrefabInstance: {fileID: 1857856620}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &774122015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774122016}
+  m_Layer: 7
+  m_Name: AttackPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &774122016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774122015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41, y: 0.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 250928841}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &794123938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53388,7 +53419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151133964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.959999, y: 3.6500015, z: -10}
+  m_LocalPosition: {x: -15.23, y: 3.43, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53420,9 +53451,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2053681869}
     m_Modifications:
+    - target: {fileID: 460464954687197461, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1183983481367062128, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
       propertyPath: m_Name
       value: Bad Guy 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183983481367062128, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3788171542431563005, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
       propertyPath: maxHealth
@@ -53480,6 +53519,14 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 386253217}
+    - target: {fileID: 4939781751297438405, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031164261470749798, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53588,6 +53635,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+--- !u!114 &1373470752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373470734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7be719df7dbfe84d8136c654fdf57c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwAttack: 0.5
+  attackPos: {fileID: 774122016}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 128
+  attackRange: 0.75
+  damage: 1
 --- !u!4 &1383874074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2314258916197942899, guid: b7739da86bca22345839e08003880b16, type: 3}
@@ -58638,9 +58704,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2053681869}
     m_Modifications:
+    - target: {fileID: 460464954687197461, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1183983481367062128, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
       propertyPath: m_Name
       value: Bad Guy 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183983481367062128, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3788171542431563005, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
       propertyPath: maxHealth
@@ -58698,6 +58772,14 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 882176898}
+    - target: {fileID: 4939781751297438405, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031164261470749798, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58802,6 +58884,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3836054527727189975, guid: f70c62151281a3349a1456d2cbfe6fc3, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1883520308}
+    - targetCorrespondingSourceObject: {fileID: 3836054527727189975, guid: f70c62151281a3349a1456d2cbfe6fc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 774122016}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3836054527727189976, guid: f70c62151281a3349a1456d2cbfe6fc3, type: 3}
       insertIndex: -1
@@ -58809,6 +58894,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3836054527727189976, guid: f70c62151281a3349a1456d2cbfe6fc3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1373470746}
+    - targetCorrespondingSourceObject: {fileID: 3836054527727189976, guid: f70c62151281a3349a1456d2cbfe6fc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1373470752}
   m_SourcePrefab: {fileID: 100100000, guid: f70c62151281a3349a1456d2cbfe6fc3, type: 3}
 --- !u!1001 &1755039654
 PrefabInstance:
@@ -58818,9 +58906,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2053681869}
     m_Modifications:
+    - target: {fileID: 460464954687197461, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1183983481367062128, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
       propertyPath: m_Name
       value: Bad Guy 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183983481367062128, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3788171542431563005, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
       propertyPath: maxHealth
@@ -58878,6 +58974,14 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 914260497}
+    - target: {fileID: 4939781751297438405, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031164261470749798, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -59331,9 +59435,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2053681869}
     m_Modifications:
+    - target: {fileID: 460464954687197461, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1183983481367062128, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
       propertyPath: m_Name
       value: Bad Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183983481367062128, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3788171542431563005, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
       propertyPath: maxHealth
@@ -59391,6 +59503,14 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 1683651657}
+    - target: {fileID: 4939781751297438405, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031164261470749798, guid: f5df3bfe811c33843875ea596fa7ac80, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
