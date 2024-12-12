@@ -11,6 +11,7 @@ public class Shooter : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetweenFiring;
+    public int arrowsAvaiable;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +39,11 @@ public class Shooter : MonoBehaviour
             }
         }
 
-        if(Input.GetMouseButton(0) && canFire)
+        if(Input.GetMouseButton(0) && canFire && arrowsAvaiable > 0)
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            arrowsAvaiable -= 1;
         }
     }
 }
