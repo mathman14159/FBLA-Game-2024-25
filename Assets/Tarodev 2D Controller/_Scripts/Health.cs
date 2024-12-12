@@ -26,6 +26,11 @@ public class Health : MonoBehaviour
     void Update()
     {
         healthBar.value = currentHealth;
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+            //Dead
+        }
     }
     void TakeDamage(int amount)
     {
@@ -46,6 +51,10 @@ public class Health : MonoBehaviour
         {
             BossPoints = BossScore.instance.currentBossScore;
             TakeDamage(BossPoints);
+        }
+        if (other.CompareTag("Spike"))
+        {
+            currentHealth = 0;
         }
         
     }
