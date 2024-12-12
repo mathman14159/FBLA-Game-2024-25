@@ -53652,7 +53652,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 128
-  attackRange: 0.75
+  attackRange: 1.02
   damage: 1
 --- !u!4 &1383874074 stripped
 Transform:
@@ -59151,6 +59151,7 @@ MonoBehaviour:
   bulletTransform: {fileID: 798171238}
   canFire: 1
   timeBetweenFiring: 0.3
+  arrowsAvaiable: 50
 --- !u!212 &1883520310
 SpriteRenderer:
   m_ObjectHideFlags: 0

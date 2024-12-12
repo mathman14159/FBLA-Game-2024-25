@@ -86,7 +86,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ClimbIdle
-  m_Speed: 1
+  m_Speed: 1e-10
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -98,7 +98,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cf5757b2c3b287b47a88343ecdde4852, type: 2}
+  m_Motion: {fileID: 7400000, guid: bb6c43a20b419b3418eb94ae6572fe8c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
