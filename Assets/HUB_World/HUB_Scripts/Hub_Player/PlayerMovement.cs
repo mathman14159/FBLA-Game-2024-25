@@ -9,10 +9,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movement;
 
     private Rigidbody2D _rb;
+    private Animator _animator;
+
+    private const string _horizontal = "Horizontal";
+    private const string _vertical = "Vertical";
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -20,5 +25,8 @@ public class PlayerMovement : MonoBehaviour
         _movement.Set(InputManager.Movement.x, InputManager.Movement.y);
 
         _rb.velocity = _movement * _moveSpeed;
+
+        _animator.SetFloat(_horizontal, _movement.x);
+        _animator.SetFloat(_vertical, _movement.y);
     }
 }
