@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movement;
 
     private Rigidbody2D _rb;
+    
     private Animator _animator;
 
     private const string _horizontal = "Horizontal";
@@ -36,5 +38,7 @@ public class PlayerMovement : MonoBehaviour
             _animator.SetFloat(_lastHorizontal, _movement.x);
             _animator.SetFloat(_lastVertical, _movement.y);
         }
+        
+        _rb.AddForce(_movement * _moveSpeed);
     }
 }
