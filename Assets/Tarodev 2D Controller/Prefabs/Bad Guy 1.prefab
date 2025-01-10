@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   currentHealth: 0
+  hitColorDuration: 0.1
 --- !u!61 &5916503389316941749
 BoxCollider2D:
   m_ObjectHideFlags: 0
