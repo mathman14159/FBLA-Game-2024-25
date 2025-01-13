@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Boss_Script : MonoBehaviour
@@ -8,6 +9,7 @@ public class Boss_Script : MonoBehaviour
     public int currentHealth;
     public SpriteRenderer spriteRenderer;
     private Color originalColor;
+    public Animator animator;
 
     public float hitColorDuration = 0.1f;
 
@@ -18,6 +20,7 @@ public class Boss_Script : MonoBehaviour
         currentHealth = maxHealth;
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+        
 
     }
 
@@ -34,20 +37,31 @@ public class Boss_Script : MonoBehaviour
             
             Destroy(gameObject);
         }
+        
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet_Player"))
         {
+            animator.SetTrigger("IsHurt");
             Destroy(other.gameObject);
             TakeDamage(1);
             BossScore.instance.IncreaseBossScore(1);
-            StartCoroutine(ChangeColorTemporarily());
+            animator.SetBool("IsHurt", true);
+            StartCoroutine(WaitAndDoSomething());
+            
         }
     }
-    private IEnumerator ChangeColorTemporarily()
+     
+    
+
+    private IEnumerator WaitAndDoSomething()
     {
-        spriteRenderer.color = Color.red; // Change color to red
-        yield return new WaitForSeconds(hitColorDuration); // Wait for a short period
-        spriteRenderer.color = originalColor; // Revert to the original color
+        // Wait for 1 second
+        yield return new WaitForSeconds(.2f);
+        animator.SetBool("IsHurt", false);
+
+        // Code to execute after 1 second
+        Debug.Log("1 second has passed!");
     }
+
 }
