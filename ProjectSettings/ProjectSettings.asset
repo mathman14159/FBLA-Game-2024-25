@@ -618,8 +618,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: FBLA Game 2024-25
-  metroPackageVersion: 
+  metroPackageName: FBLAGame2024-25
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -627,7 +627,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: FBLA Game 2024-25
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: FBLA Game 2024-25
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
