@@ -11,7 +11,7 @@ public class ScoreScript : MonoBehaviour
         {
             Destroy(other.gameObject);
             ScoreCounter.instance.IncreaseScore(value);
-            BossScore.instance.IncreaseBossScore(-1);
+            
             
         }
         

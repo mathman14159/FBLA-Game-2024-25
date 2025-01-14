@@ -56,6 +56,9 @@ public class Health : MonoBehaviour
         {
             currentHealth = 0;
         }
-        
+        if (other.CompareTag("Bone"))
+        {
+            TakeDamage(1);
+        }
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Ground
   - Spike
   - LevelExit
+  - Bone
   layers:
   - Default
   - TransparentFX
