@@ -10,6 +10,7 @@ TagManager:
   - Boss
   - Ground
   - Spike
+  - LevelExit
   layers:
   - Default
   - TransparentFX

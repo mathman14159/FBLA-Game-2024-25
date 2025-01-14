@@ -41,4 +41,7 @@ public class PlayerMovement : MonoBehaviour
         
         _rb.AddForce(_movement * _moveSpeed);
     }
+
 }
+
+
