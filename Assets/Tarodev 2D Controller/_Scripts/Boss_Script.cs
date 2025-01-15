@@ -12,6 +12,7 @@ public class Boss_Script : MonoBehaviour
     public Animator animator;
 
     public float hitColorDuration = 0.1f;
+    
 
 
     // Start is called before the first frame update

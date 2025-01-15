@@ -31,6 +31,7 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
             //Dead
         }
+        BossPoints = BossScore.instance.currentBossScore;
     }
     void TakeDamage(int amount)
     {
@@ -60,5 +61,6 @@ public class Health : MonoBehaviour
         {
             TakeDamage(1);
         }
+        
     }
 }

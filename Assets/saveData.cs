@@ -7,6 +7,7 @@ public class saveData : MonoBehaviour
 {
     public int endHealth;
     public int endScore;
+    public int bossScore;
     
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class saveData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        bossScore = BossScore.instance.currentBossScore;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -27,7 +28,12 @@ public class saveData : MonoBehaviour
             endScore = ScoreCounter.instance.currentScore;
             PlayerPrefs.SetInt("Health", endHealth);
             PlayerPrefs.SetInt("Score", endScore);
-            SceneManager.LoadScene("Second Level");
+            if (bossScore == 0)
+            {
+                SceneManager.LoadScene("Boss_Fight1");
+            }
+            
+            
         }
     }
 }
