@@ -30,10 +30,18 @@ public class saveData : MonoBehaviour
             PlayerPrefs.SetInt("Score", endScore);
             if (bossScore == 0)
             {
-                SceneManager.LoadScene("Boss_Fight1");
+                SceneManager.LoadScene("Boss_Fight");
             }
-            
-            
+            if (bossScore == 7)
+            {
+                SceneManager.LoadScene("Boss_Fight(V3)");
+            }
+            else
+            {
+                SceneManager.LoadScene("Boss_Fight(V2)");
+            }
+
+
         }
     }
 }
