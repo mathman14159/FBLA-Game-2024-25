@@ -52,3 +52,21 @@ TagManager:
   - name: Top
     uniqueID: 2531116633
     locked: 1
+  - name: Ground
+    uniqueID: 4276842699
+    locked: 0
+  - name: WalkInfront
+    uniqueID: 3550302111
+    locked: 0
+  - name: Collision
+    uniqueID: 1633215759
+    locked: 0
+  - name: Player
+    uniqueID: 4144792295
+    locked: 0
+  - name: WalkBehind
+    uniqueID: 2104716763
+    locked: 0
+  - name: Decor
+    uniqueID: 718121135
+    locked: 0
