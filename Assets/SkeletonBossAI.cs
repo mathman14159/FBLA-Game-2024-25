@@ -14,14 +14,23 @@ public class SkeletonBossAI : MonoBehaviour
     public Transform throwPoint; // Point from which the bone is thrown
     public LayerMask groundLayer; // LayerMask to identify ground
     public float groundCheckDistance = 0.5f; // Distance to check for ground
+    public int maxHealth;
+    public int currentHealth;
 
     private Rigidbody2D rb; // Rigidbody2D for movement
     private bool isFacingRight = true; // Tracks the direction the boss is facing
     private float actionTimer = 0f; // Timer to track state transitions
     private bool isFollowing = true; // Whether the boss is currently following the player
 
+    void Awake()
+    {
+        
+    }
+
+
     void Start()
     {
+        currentHealth = (PlayerPrefs.GetInt("BossScore") * 2) + 20;
         rb = GetComponent<Rigidbody2D>();
         StartFollowing();
     }
@@ -116,6 +125,7 @@ public class SkeletonBossAI : MonoBehaviour
         }
 
         Debug.Log("Skeleton Boss threw a bone!");
+        TakeDamage(1);
     }
 
     private void StartFollowing()
@@ -130,6 +140,15 @@ public class SkeletonBossAI : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+    }
+    void TakeDamage(int amount)
+    {
+        currentHealth -= amount;
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+            //Dead
+        }
     }
 
     private void OnDrawGizmos()
