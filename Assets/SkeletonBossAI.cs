@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkeletonBossAI : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class SkeletonBossAI : MonoBehaviour
     public float groundCheckDistance = 0.5f; // Distance to check for ground
     public int maxHealth;
     public int currentHealth;
+    public Slider healthBar;
 
     private Rigidbody2D rb; // Rigidbody2D for movement
     private bool isFacingRight = true; // Tracks the direction the boss is facing
@@ -38,6 +40,7 @@ public class SkeletonBossAI : MonoBehaviour
     void Update()
     {
         actionTimer -= Time.deltaTime;
+        healthBar.value = currentHealth;
 
         if (isFollowing)
         {
