@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: d29d2ef1a268f224ba601bba32f6e7f6
   - enabled: 1
-    path: Assets/Scenes/Hub World.unity
+    path: Assets/Scenes/Hub World-Cave.unity
     guid: bc187bc68618b6c49afd5e5f73431ac4
   - enabled: 1
     path: Assets/Scenes/Level 1/First Level.unity
@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 1/Boss_Fight(V3).unity
     guid: 8ff0b3a9eb3354744848803fda0e1ca5
+  - enabled: 1
+    path: Assets/Scenes/Hub World-Heaven.unity
+    guid: 3b0f6b0d1a946674f87f883f6d630bb5
+  - enabled: 1
+    path: Assets/Scenes/Hub World-Forest.unity
+    guid: a49f56d7807ebc24eb0f20e985078d3b
   m_configObjects: {}
