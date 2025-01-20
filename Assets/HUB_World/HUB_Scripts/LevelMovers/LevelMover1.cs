@@ -6,6 +6,7 @@ public class LevelMover1 : MonoBehaviour
 {
     public int sceneBuildIndex;
 
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
