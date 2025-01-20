@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hub World-Forest.unity
     guid: a49f56d7807ebc24eb0f20e985078d3b
+  - enabled: 1
+    path: Assets/Scenes/Second Level.unity
+    guid: 1df270538445b8f4d86069319848f539
   m_configObjects: {}
