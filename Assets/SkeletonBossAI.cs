@@ -155,7 +155,7 @@ public class SkeletonBossAI : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("Second Level");
+            SceneManager.LoadScene("Hub World-Heaven");
             endHealth = Health.instance.currentHealth;
             endScore = ScoreCounter.instance.currentScore;
             PlayerPrefs.SetInt("Health", endHealth);
