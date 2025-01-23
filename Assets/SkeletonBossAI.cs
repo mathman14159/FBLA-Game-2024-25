@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SkeletonBossAI : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class SkeletonBossAI : MonoBehaviour
     private bool isFacingRight = true; // Tracks the direction the boss is facing
     private float actionTimer = 0f; // Timer to track state transitions
     private bool isFollowing = true; // Whether the boss is currently following the player
+    public int endHealth;
+    public int endScore;
+    
 
     void Awake()
     {
@@ -150,6 +155,11 @@ public class SkeletonBossAI : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("Second Level");
+            endHealth = Health.instance.currentHealth;
+            endScore = ScoreCounter.instance.currentScore;
+            PlayerPrefs.SetInt("Health", endHealth);
+            PlayerPrefs.SetInt("Score", endScore);
             //Dead
         }
     }

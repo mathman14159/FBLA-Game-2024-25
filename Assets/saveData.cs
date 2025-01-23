@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,11 +29,20 @@ public class saveData : MonoBehaviour
             endScore = ScoreCounter.instance.currentScore;
             PlayerPrefs.SetInt("Health", endHealth);
             PlayerPrefs.SetInt("Score", endScore);
-            if (bossScore == 0)
+            
+            if (bossScore >= 0 && bossScore <= 2)
             {
                 SceneManager.LoadScene("Boss_Fight");
             }
-            
+            else if (bossScore >= 3 && bossScore <= 20)
+            {
+                SceneManager.LoadScene("Boss_Fight(V2)");
+            }
+            else if (bossScore == 21)
+            {
+                SceneManager.LoadScene("Boss_Fight(V3)");
+            }
+
 
 
         }

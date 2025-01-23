@@ -26,6 +26,7 @@ public class Health_Next_Level : MonoBehaviour
     void Start()
     {
         currentHealth = PlayerPrefs.GetInt("Health");
+
     }
 
     // Update is called once per frame
