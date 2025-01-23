@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Health : MonoBehaviour
     public int currentHealth;
     public Slider healthBar;
     public int BossPoints;
+
+    public int sceneBuildIndex;
 
     // Start is called before the first frame update
     void Awake(){
@@ -40,6 +43,7 @@ public class Health : MonoBehaviour
         {
             Destroy(gameObject);
             //Dead
+            SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
     }
     private void OnTriggerEnter2D(Collider2D other) {

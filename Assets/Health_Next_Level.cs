@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+
 
 public class Health_Next_Level : MonoBehaviour
 {
+    public int sceneBuildIndex;
+
     // Start is called before the first frame update
    public static Health_Next_Level instance;
     public int maxHealth = 5;
@@ -41,6 +46,7 @@ public class Health_Next_Level : MonoBehaviour
         {
             Destroy(gameObject);
             //Dead
+            SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
     }
     private void OnTriggerEnter2D(Collider2D other) {
