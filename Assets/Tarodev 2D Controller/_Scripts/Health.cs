@@ -60,6 +60,7 @@ public class Health : MonoBehaviour
         if (other.CompareTag("Spike"))
         {
             currentHealth = 0;
+            SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
         if (other.CompareTag("Bone"))
         {
