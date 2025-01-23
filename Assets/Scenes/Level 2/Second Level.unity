@@ -82245,7 +82245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1150ad475717cfb469a60534c3838989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 0
+  sceneBuildIndex: 9
   maxHealth: 5
   currentHealth: 0
   healthBar: {fileID: 1797242647}

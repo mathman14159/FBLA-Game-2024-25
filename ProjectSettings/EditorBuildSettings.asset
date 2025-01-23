@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2/Second Level.unity
     guid: 1df270538445b8f4d86069319848f539
+  - enabled: 1
+    path: Assets/Scenes/Death Screen.unity
+    guid: dd593a5ab165e5b44a559cc4b9767309
+  - enabled: 1
+    path: Assets/Scenes/Hub World-Wizard.unity
+    guid: 6a7158c2dd4d786449cb1c301bee0233
   m_configObjects: {}
