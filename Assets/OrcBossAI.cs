@@ -6,92 +6,98 @@ using UnityEngine;
 
 public class OrcBossAI : MonoBehaviour
 {
-    public float moveSpeed = 3f; // Movement speed of the Orc
-    public float followRange = 10f; // Distance at which the Orc starts following the player
-    public float attackRange = 2f; // Distance at which the Orc can attack
-    public float swingAttackDelay = 1f; // Time between attack choices
-    public float attackCooldown = 0f; // Cooldown for the next attack
+    [SerializeField] private Transform player; // Reference to the player's Transform
+    [SerializeField] private float moveSpeed = 5f; // Movement speed of the boss
+    [SerializeField] private float stopDistance = 1.5f; // Distance at which the boss stops to attack
+    [SerializeField] private float attackCooldown = 2f; // Time between attacks
+    [SerializeField] private Animator animator; // Animator for attack animations
 
-    private Transform player; // Reference to the player
-    private Rigidbody2D rb; // Orc's Rigidbody2D for movement
-    private bool isAttacking = false; // Flag to check if Orc is currently attacking
+    private bool isAttacking = false; // Whether the boss is currently attacking
+    private float lastAttackTime = 0f; // Timestamp of the last attack
+    [SerializeField] GameObject OverheadAttackHitBox;
+    [SerializeField] GameObject RoundhouseSwingHitBox;
 
-    void Start()
+    private void Update()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform; // Find the player by tag
-        rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component
-    }
-
-    void Update()
-    {
-        if (attackCooldown > 0)
-            attackCooldown -= Time.deltaTime;
-
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-
-        if (distanceToPlayer <= followRange && !isAttacking)
+        // If not attacking, move toward the player
+        if (!isAttacking)
         {
-            FollowPlayer(); // Move towards the player if within follow range
+            FollowPlayer();
         }
 
-        if (distanceToPlayer <= attackRange && attackCooldown <= 0 && !isAttacking)
+        // Check if it's time to attack
+        if (Vector2.Distance(transform.position, player.position) <= stopDistance && !isAttacking)
         {
-            PerformAttack(); // Perform attack if within range and cooldown is over
+            if (Time.time - lastAttackTime >= attackCooldown)
+            {
+                StartCoroutine(PerformAttack());
+            }
         }
     }
 
-    // Function to follow the player
-    void FollowPlayer()
+    private void FollowPlayer()
     {
-        Vector2 direction = (player.position - transform.position).normalized; // Get direction towards player
-        rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); // Move towards player horizontally
+        // Move toward the player
+        Vector2 direction = (player.position - transform.position).normalized;
 
-        // Flip Orc sprite to face player
-        if (player.position.x < transform.position.x)
-            transform.localScale = new Vector3(-1, 1, 1); // Flip to face left
-        else
-            transform.localScale = new Vector3(1, 1, 1); // Flip to face right
+        // Move horizontally only
+        transform.position += new Vector3(direction.x * moveSpeed * Time.deltaTime, 0, 0);
+
+        // Flip the boss to face the player
+        if (direction.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1); // Facing right
+        }
+        else if (direction.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1); // Facing left
+        }
     }
 
-    // Function to perform an attack
-    void PerformAttack()
+    private IEnumerator PerformAttack()
     {
         isAttacking = true;
-        rb.velocity = Vector2.zero; // Stop movement by setting velocity to zero
-        attackCooldown = swingAttackDelay; // Set cooldown to prevent immediate re-attacks
 
-        // Randomly choose between a swing attack or overhead attack
-        int attackChoice = Random.Range(0, 2); // 0 for swing, 1 for overhead
+        // Randomly choose between two attacks
+        bool isOverheadAttack = Random.value > 0.5f;
 
-        if (attackChoice == 0)
+        if (isOverheadAttack)
         {
-            SwingAttack();
+            animator.SetBool("OverheadAttack", true); // Trigger overhead attack animation
+            OverheadAttackHitBox.SetActive(true);
+            StartCoroutine(OverheadAttack());
+
         }
         else
         {
-            OverheadAttack();
+            animator.SetBool("RoundhouseSwing", true); // Trigger roundhouse swing animation
+            RoundhouseSwingHitBox.SetActive(true);
+            
         }
+
+        // Wait for the attack animation to finish (assumes 1 second duration)
+        yield return new WaitForSeconds(1f);
+
+        // End attack and reset cooldown
+        lastAttackTime = Time.time;
+        isAttacking = false;
     }
 
-    // Function for the quick swing attack
-    void SwingAttack()
+    private void OnDrawGizmosSelected()
     {
-        // Here you would implement the logic for the swing attack, like damaging the player
-        Debug.Log("Orc performs a quick swing attack!");
-
-        // Add your attack animation logic or damage logic here
-
-        isAttacking = false; // Reset attack flag
+        // Visualize the stop distance in the editor
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, stopDistance);
     }
 
-    // Function for the slower overhead attack
-    void OverheadAttack()
+    private IEnumerator OverheadAttack()
     {
-        // Here you would implement the logic for the overhead attack, like damaging the player
-        Debug.Log("Orc performs a slower overhead attack!");
+        // Wait for 1 second
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("OverheadAttack", false);
+        OverheadAttackHitBox.SetActive(false);
 
-        // Add your attack animation logic or damage logic here
-
-        isAttacking = false; // Reset attack flag
+        // Code to execute after 1 second
+        Debug.Log("1 second has passed!");
     }
 }

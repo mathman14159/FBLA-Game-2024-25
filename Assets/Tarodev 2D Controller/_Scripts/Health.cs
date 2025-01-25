@@ -13,6 +13,9 @@ public class Health : MonoBehaviour
     public int BossPoints;
 
     public int sceneBuildIndex;
+    [SerializeField] GameObject OverheadAttackHitBox;
+    [SerializeField] GameObject RoundhouseSwingHitBox;
+    [SerializeField] private Animator animator; // Animator for attack animations
 
     // Start is called before the first frame update
     void Awake(){
@@ -66,6 +69,15 @@ public class Health : MonoBehaviour
         {
             TakeDamage(1);
         }
-        
+        if (other.CompareTag("Swing"))
+        {
+            TakeDamage(1);
+            animator.SetBool("RoundhouseSwing", false);
+            RoundhouseSwingHitBox.SetActive(false);
+        }
+        if (other.CompareTag("Overhead"))
+        {
+            TakeDamage(1);
+        }
     }
 }
