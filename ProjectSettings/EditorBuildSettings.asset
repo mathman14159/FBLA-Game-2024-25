@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 2/Second Level Boss V1.unity
     guid: 1df270538445b8f4d86069319848f539
   - enabled: 1
+    path: Assets/Scenes/Level 2/Second Level Boss V2.unity
+    guid: 58ccc3aed3b89ab428f1c3d085361ee0
+  - enabled: 1
+    path: Assets/Scenes/Level 2/Second Level Boss V3.unity
+    guid: 9f347e43f7e59294ca82d849bf7e74c4
+  - enabled: 1
     path: Assets/Scenes/Death Screen.unity
     guid: dd593a5ab165e5b44a559cc4b9767309
   - enabled: 1

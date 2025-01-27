@@ -32,15 +32,15 @@ public class saveData2 : MonoBehaviour
 
             if (bossScore >= 0 && bossScore <= 2)
             {
-                SceneManager.LoadScene("Boss_Fight");
+                SceneManager.LoadScene("Second Level Boss V1");
             }
             else if (bossScore >= 3 && bossScore <= 20)
             {
-                SceneManager.LoadScene("Boss_Fight(V2)");
+                SceneManager.LoadScene("Second Level Boss V2");
             }
             else if (bossScore == 21)
             {
-                SceneManager.LoadScene("Boss_Fight(V3)");
+                SceneManager.LoadScene("Second Level Boss V1");
             }
 
 

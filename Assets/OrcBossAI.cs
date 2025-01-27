@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 
@@ -16,9 +18,15 @@ public class OrcBossAI : MonoBehaviour
     private float lastAttackTime = 0f; // Timestamp of the last attack
     [SerializeField] GameObject OverheadAttackHitBox;
     [SerializeField] GameObject RoundhouseSwingHitBox;
+    public int maxHealth;
+    public int currentHealth;
+    public Slider healthBar;
+    public int endHealth;  // PlayerPref on the end of the Players health
+    public int endScore; // PlayerPref on the end of the Players score
 
     private void Update()
     {
+        healthBar.value = currentHealth;
         // If not attacking, move toward the player
         if (!isAttacking)
         {
@@ -99,5 +107,41 @@ public class OrcBossAI : MonoBehaviour
 
         // Code to execute after 1 second
         Debug.Log("1 second has passed!");
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet_Player"))
+        {
+            Destroy(other.gameObject);
+            TakeDamage(1);
+            BossScore.instance.IncreaseBossScore(1);
+            animator.SetBool("IsHurt", true);
+            StartCoroutine(WaitAndDoSomething());
+
+        }
+    }
+    private IEnumerator WaitAndDoSomething()
+    {
+        // Wait for 1 second
+        yield return new WaitForSeconds(.2f);
+        animator.SetBool("IsHurt", false);
+
+        // Code to execute after 1 second
+        Debug.Log("1 second has passed!");
+    }
+
+    void TakeDamage(int amount)
+    {
+        currentHealth -= amount;
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene("Hub World-Heaven");
+            endHealth = Health.instance.currentHealth;
+            endScore = ScoreCounter.instance.currentScore;
+            PlayerPrefs.SetInt("Health", endHealth);
+            PlayerPrefs.SetInt("Score", endScore);
+            //Dead
+        }
     }
 }

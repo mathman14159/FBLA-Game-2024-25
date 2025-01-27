@@ -25,8 +25,8 @@ public class SkeletonBossAI : MonoBehaviour
     private bool isFacingRight = true; // Tracks the direction the boss is facing
     private float actionTimer = 0f; // Timer to track state transitions
     private bool isFollowing = true; // Whether the boss is currently following the player
-    public int endHealth;
-    public int endScore;
+    public int endHealth;  // PlayerPref on the end of the Players health
+    public int endScore; // PlayerPref on the end of the Players score
     public Animator animator;
 
 
