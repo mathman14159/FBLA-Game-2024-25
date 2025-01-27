@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 public class SkeletonBossAI : MonoBehaviour
 {
@@ -27,7 +27,8 @@ public class SkeletonBossAI : MonoBehaviour
     private bool isFollowing = true; // Whether the boss is currently following the player
     public int endHealth;
     public int endScore;
-    
+    public Animator animator;
+
 
     void Awake()
     {
@@ -171,5 +172,27 @@ public class SkeletonBossAI : MonoBehaviour
         Vector2 groundCheckPosition = new Vector2(transform.position.x + (isFacingRight ? groundCheckDistance : -groundCheckDistance), transform.position.y);
         Gizmos.DrawLine(groundCheckPosition, groundCheckPosition + Vector2.down * 1f);
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet_Player"))
+        {
+            Destroy(other.gameObject);
+            TakeDamage(1);
+            BossScore.instance.IncreaseBossScore(1);
+            animator.SetBool("IsHurt", true);
+            StartCoroutine(WaitAndDoSomething());
+
+        }
+    }
+    private IEnumerator WaitAndDoSomething()
+    {
+        // Wait for 1 second
+        yield return new WaitForSeconds(.2f);
+        animator.SetBool("IsHurt", false);
+
+        // Code to execute after 1 second
+        Debug.Log("1 second has passed!");
+    }
+
 
 }
