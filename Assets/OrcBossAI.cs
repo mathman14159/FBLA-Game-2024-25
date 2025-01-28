@@ -136,7 +136,7 @@ public class OrcBossAI : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("Hub World-Heaven");
+            SceneManager.LoadScene("Win Screen");
             endHealth = Health.instance.currentHealth;
             endScore = ScoreCounter.instance.currentScore;
             PlayerPrefs.SetInt("Health", endHealth);

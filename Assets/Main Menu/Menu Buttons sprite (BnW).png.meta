@@ -391,7 +391,7 @@ TextureImporter:
         width: 601
         height: 202
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,6 +399,27 @@ TextureImporter:
       bones: []
       spriteID: 43dfd5d3a00dff84594e485adf1c9da0
       internalID: 459932698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Buttons sprite (BnW)_14
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 626
+        width: 599
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8039a984eadfa8448c95fb02eeb4822
+      internalID: -12946287
       vertices: []
       indices: 
       edges: []
@@ -420,6 +441,7 @@ TextureImporter:
       Menu Buttons sprite (BnW)_11: 115429194
       Menu Buttons sprite (BnW)_12: -1644330013
       Menu Buttons sprite (BnW)_13: 459932698
+      Menu Buttons sprite (BnW)_14: -12946287
       Menu Buttons sprite (BnW)_2: 543825114
       Menu Buttons sprite (BnW)_3: -1809385994
       Menu Buttons sprite (BnW)_4: -267772611
