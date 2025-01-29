@@ -108928,7 +108928,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 1797242647}
   BossPoints: 0
-  sceneBuildIndex: 9
+  sceneBuildIndex: 11
   OverheadAttackHitBox: {fileID: 0}
   RoundhouseSwingHitBox: {fileID: 0}
   animator: {fileID: 0}
