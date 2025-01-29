@@ -24,6 +24,11 @@ public class OrcBossAI : MonoBehaviour
     public int endHealth;  // PlayerPref on the end of the Players health
     public int endScore; // PlayerPref on the end of the Players score
 
+    private void Start()
+    {
+        currentHealth = (PlayerPrefs.GetInt("BossScore") * 3) + 25;
+    }
+
     private void Update()
     {
         healthBar.value = currentHealth;
