@@ -13,8 +13,11 @@ public class ArrowKepper : MonoBehaviour
     {
         instance = this;
     }
-    
-    
+    private void Update()
+    {
+        PlayerPrefs.SetInt("Arrows", currentArrows);
+    }
+
     void Start()
     {
         currentArrows = PlayerPrefs.GetInt("Arrows");
