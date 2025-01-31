@@ -13,7 +13,7 @@ public class ScoreCounter : MonoBehaviour
     {
         instance = this;
     }
-
+    
     
     void Start()
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using JetBrains.Annotations;
 
 public class Health : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Health : MonoBehaviour
     public int currentHealth;
     public Slider healthBar;
     public int BossPoints;
+    public int arrowsOnStart;
 
     public int sceneBuildIndex;
     [SerializeField] GameObject OverheadAttackHitBox;
@@ -25,6 +27,8 @@ public class Health : MonoBehaviour
 
     void Start()
     {
+        arrowsOnStart = 60;
+        PlayerPrefs.SetInt("Arrows", arrowsOnStart);
         currentHealth = 5;
     }
 

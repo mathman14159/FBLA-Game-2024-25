@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooter : MonoBehaviour
 {
@@ -12,9 +13,11 @@ public class Shooter : MonoBehaviour
     private float timer;
     public float timeBetweenFiring;
     public int arrowsAvaiable;
+    public int value;
     // Start is called before the first frame update
     void Start()
     {
+        arrowsAvaiable = PlayerPrefs.GetInt("Arrows");
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -44,6 +47,7 @@ public class Shooter : MonoBehaviour
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
             arrowsAvaiable -= 1;
+            ArrowKepper.instance.DecreaseArrows(1);
         }
     }
 }
