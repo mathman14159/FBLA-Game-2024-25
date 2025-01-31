@@ -17,6 +17,7 @@ public class Shooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         arrowsAvaiable = PlayerPrefs.GetInt("Arrows");
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
@@ -49,5 +50,6 @@ public class Shooter : MonoBehaviour
             arrowsAvaiable -= 1;
             ArrowKepper.instance.DecreaseArrows(1);
         }
+        PlayerPrefs.SetInt("Arrows", arrowsAvaiable);
     }
 }

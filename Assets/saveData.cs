@@ -9,6 +9,7 @@ public class saveData : MonoBehaviour
     public int endHealth;
     public int endScore;
     public int bossScore;
+    public int endArrowCount;
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class saveData : MonoBehaviour
     void Update()
     {
         bossScore = BossScore.instance.currentBossScore;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
