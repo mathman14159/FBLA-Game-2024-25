@@ -26,4 +26,9 @@ public class ScoreCounter : MonoBehaviour
         currentScore += v;
         scoreText.text = "" + currentScore.ToString();
     }
+    public void DecreseScore(int v)
+    {
+        currentScore -= v;
+        scoreText.text = "" + currentScore.ToString();
+    }
 }

@@ -25,7 +25,7 @@ public class Shop : MonoBehaviour
         if (coins > 0)
         {
             ArrowKepper.instance.IncreaseArrows(1);
-            
+            ScoreCounter.instance.DecreseScore(1);
             coins -= 1;
             PlayerPrefs.SetInt("Arrows", arrows);
             PlayerPrefs.SetInt("Score",coins);
