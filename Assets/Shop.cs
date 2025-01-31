@@ -24,7 +24,8 @@ public class Shop : MonoBehaviour
     {
         if (coins > 0)
         {
-            arrows += 1;
+            ArrowKepper.instance.IncreaseArrows(1);
+            
             coins -= 1;
             PlayerPrefs.SetInt("Arrows", arrows);
             PlayerPrefs.SetInt("Score",coins);
