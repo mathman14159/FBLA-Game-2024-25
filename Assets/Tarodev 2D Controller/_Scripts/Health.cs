@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        //arrowsOnStart = 60;
+        arrowsOnStart = 60;
         PlayerPrefs.SetInt("Arrows", arrowsOnStart);
         currentHealth = 5;
     }

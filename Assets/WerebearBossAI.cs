@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class WerebearBossAI : MonoBehaviour
 {
@@ -19,16 +17,9 @@ public class WerebearBossAI : MonoBehaviour
     private float lastAttackTime = 0f;
     private Health playerHealth;
     private Rigidbody2D playerRb;
-    public int maxHealth;
-    public int currentHealth;
-    public Slider healthBar;
-    public int endHealth;  // PlayerPref on the end of the Players health
-    public int endScore; // PlayerPref on the end of the Players score
-    
 
     private void Start()
     {
-        currentHealth = (PlayerPrefs.GetInt("BossScore") * 2) + 10;
         playerHealth = player.GetComponent<Health>();
         playerRb = player.GetComponent<Rigidbody2D>();
 
@@ -44,7 +35,6 @@ public class WerebearBossAI : MonoBehaviour
 
     private void Update()
     {
-        healthBar.value = currentHealth;
         if (!isAttacking)
         {
             FollowPlayer();
@@ -113,21 +103,6 @@ public class WerebearBossAI : MonoBehaviour
             playerHealth.TakeDamage(1);
         }
     }
-    void TakeDamage(int amount)
-    {
-        currentHealth -= amount;
-        if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-            
-            endHealth = Health.instance.currentHealth;
-            endScore = ScoreCounter.instance.currentScore;
-            PlayerPrefs.SetInt("Health", endHealth);
-            PlayerPrefs.SetInt("Score", endScore);
-            SceneManager.LoadScene("Win Screen");
-            //Dead
-        }
-    }
 
 
     private void OnDrawGizmosSelected()
@@ -135,26 +110,4 @@ public class WerebearBossAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, stopDistance);
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Bullet_Player"))
-        {
-            Destroy(other.gameObject);
-            TakeDamage(1);
-            BossScore.instance.IncreaseBossScore(1);
-            animator.SetBool("IsHurt", true);
-            StartCoroutine(WaitAndDoSomething());
-
-        }
-    }
-    private IEnumerator WaitAndDoSomething()
-    {
-        // Wait for 1 second
-        yield return new WaitForSeconds(.2f);
-        animator.SetBool("IsHurt", false);
-
-        // Code to execute after 1 second
-        Debug.Log("1 second has passed!");
-    }
-
 }
