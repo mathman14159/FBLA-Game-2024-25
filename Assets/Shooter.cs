@@ -12,13 +12,13 @@ public class Shooter : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetweenFiring;
-    public int arrowsAvaiable;
+    
     public int value;
     // Start is called before the first frame update
     void Start()
     {
         
-        arrowsAvaiable = PlayerPrefs.GetInt("Arrows");
+        
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -43,13 +43,13 @@ public class Shooter : MonoBehaviour
             }
         }
 
-        if(Input.GetMouseButton(0) && canFire && arrowsAvaiable > 0)
+        if(Input.GetMouseButton(0) && canFire && ArrowKepper.instance.currentArrows > 0)
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
-            arrowsAvaiable -= 1;
+            
             ArrowKepper.instance.DecreaseArrows(1);
         }
-        PlayerPrefs.SetInt("Arrows", arrowsAvaiable);
+        
     }
 }
