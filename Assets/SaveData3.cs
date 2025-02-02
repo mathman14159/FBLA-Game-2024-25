@@ -32,15 +32,15 @@ public class SaveData3 : MonoBehaviour
 
             if (bossScore >= 0 && bossScore <= 5)
             {
-                SceneManager.LoadScene("Level3_Boss");
+                SceneManager.LoadScene("Level3_Boss(V1)");
             }
             else if (bossScore >= 6 && bossScore <= 65)
             {
-                SceneManager.LoadScene("Level3_Boss");
+                SceneManager.LoadScene("Level3_Boss(V2)");
             }
             else if (bossScore == 66)
             {
-                SceneManager.LoadScene("Level3_Boss");
+                SceneManager.LoadScene("Level3_Boss(V3)");
             }
 
 

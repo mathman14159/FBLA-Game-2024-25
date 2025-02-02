@@ -21,6 +21,7 @@ public class saveData : MonoBehaviour
     void Update()
     {
         bossScore = BossScore.instance.currentBossScore;
+        endArrowCount = ArrowKepper.instance.currentArrows;
         
     }
 
@@ -31,6 +32,7 @@ public class saveData : MonoBehaviour
             endScore = ScoreCounter.instance.currentScore;
             PlayerPrefs.SetInt("Health", endHealth);
             PlayerPrefs.SetInt("Score", endScore);
+            PlayerPrefs.SetInt("Arrows", endArrowCount);
             
             if (bossScore >= 0 && bossScore <= 2)
             {
