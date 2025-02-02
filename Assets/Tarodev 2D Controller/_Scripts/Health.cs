@@ -43,7 +43,7 @@ public class Health : MonoBehaviour
         }
         BossPoints = BossScore.instance.currentBossScore;
     }
-    void TakeDamage(int amount)
+    public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         if (currentHealth <= 0)
