@@ -51,6 +51,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Win Screen.unity
     guid: 2245aa83abdf04f4cb1a85a0d90615af
   - enabled: 1
-    path: Assets/Scenes/Level 3/Level3_Boss.unity
-    guid: 0985a913650b0c945a4a1eca6ee1886f
+    path: Assets/Scenes/Level 3/Level 3.unity
+    guid: e8c07987a298aa945a7029f648196d66
+  - enabled: 1
+    path: Assets/Scenes/Level 3/Level3_Boss(V1).unity
+    guid: a737b2aa6dfa9b944bf592a0fa0a26ea
+  - enabled: 1
+    path: Assets/Scenes/Level 3/Level3_Boss(V2).unity
+    guid: 5332dc92823749944996c606a4abdc3f
+  - enabled: 1
+    path: Assets/Scenes/Level 3/Level3_Boss(V3).unity
+    guid: 05cf7724b1d91c446990820e822c0809
   m_configObjects: {}

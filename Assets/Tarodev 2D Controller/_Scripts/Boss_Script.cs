@@ -43,7 +43,7 @@ public class Boss_Script : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet_Player"))
         {
-            animator.SetTrigger("IsHurt");
+            
             Destroy(other.gameObject);
             TakeDamage(1);
             BossScore.instance.IncreaseBossScore(1);
