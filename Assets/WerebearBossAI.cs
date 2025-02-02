@@ -11,11 +11,12 @@ public class WerebearBossAI : MonoBehaviour
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] private Animator animator;
     [SerializeField] private float knockbackForce = 5f; // Knockback strength for Ground Pound
+    [SerializeField] GameObject RoundhouseSwingHitBox;
 
     private bool isAttacking = false;
     private float lastAttackTime = 0f;
     private Health playerHealth;
-    private PlayerController player; // get a reference
+    private Rigidbody2D playerRb;
 
     private void Start()
     {
@@ -63,7 +64,7 @@ public class WerebearBossAI : MonoBehaviour
     private IEnumerator PerformAttack()
     {
         isAttacking = true;
-        int attackType = Random.Range(0, 3);
+        int attackType = Random.Range(0, 2);
 
         switch (attackType)
         {
@@ -83,10 +84,10 @@ public class WerebearBossAI : MonoBehaviour
 
             case 2:
                 animator.SetBool("GroundPound", true);
-                yield return new WaitForSeconds(0.8f);
+                yield return new WaitForSeconds(0.5f);
                 animator.SetBool("GroundPound", false);
                 DealDamage();
-                KnockbackPlayer();
+                
                 break;
         }
 
@@ -103,23 +104,6 @@ public class WerebearBossAI : MonoBehaviour
         }
     }
 
-    
-
-private void KnockbackPlayer()
-{
-    Vector2 knockbackDirection = (player.position - transform.position).normalized;
-    knockbackDirection.y = 0.5f; // Add slight upward motion for a better effect
-    player.AddFrameForce(knockbackDirection, true); // true is for "resetVelocity"
-}    
-private IEnumerator OverheadScratch()
-    {
-        // Wait for 1 second
-        yield return new WaitForSeconds(.2f);
-        animator.SetBool("OverheadScratch", false);
-
-        // Code to execute after 1 second
-        Debug.Log("1 second has passed!");
-    }
 
     private void OnDrawGizmosSelected()
     {
