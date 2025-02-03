@@ -28,7 +28,7 @@ public class WerebearBossAI : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = (PlayerPrefs.GetInt("BossScore") * 2) + 10;
+        currentHealth = (PlayerPrefs.GetInt("BossScore") * 2) + 30;
         playerHealth = player.GetComponent<Health>();
         playerRb = player.GetComponent<Rigidbody2D>();
 
@@ -124,7 +124,7 @@ public class WerebearBossAI : MonoBehaviour
             endScore = ScoreCounter.instance.currentScore;
             PlayerPrefs.SetInt("Health", endHealth);
             PlayerPrefs.SetInt("Score", endScore);
-            SceneManager.LoadScene("Win Screen");
+            SceneManager.LoadScene("Fake Win Screen");
             //Dead
         }
     }

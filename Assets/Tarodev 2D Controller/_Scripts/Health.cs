@@ -69,6 +69,10 @@ public class Health : MonoBehaviour
             currentHealth = 0;
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
+        if(other.CompareTag("Trap"))
+        {
+            TakeDamage(1);
+        }
         if (other.CompareTag("Bone"))
         {
             TakeDamage(1);

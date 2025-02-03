@@ -102459,7 +102459,7 @@ MonoBehaviour:
   bullet: {fileID: 2961445007835425953, guid: ef187782e4cccb74585971d5728ef0a8, type: 3}
   bulletTransform: {fileID: 1343279376}
   canFire: 1
-  timeBetweenFiring: 0.3
+  timeBetweenFiring: 0.7
   value: 0
 --- !u!1001 &1387863522
 PrefabInstance:
@@ -108334,7 +108334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33cb69dfe7e70943afc456227dbedd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundSlider: {fileID: 0}
+  soundSlider: {fileID: 1745671363}
   masterMixer: {fileID: 24100000, guid: c4c5807e989bd4d49bfda7fe6b1abbae, type: 2}
 --- !u!95 &1599265584
 Animator:
@@ -108434,8 +108434,8 @@ RectTransform:
   m_Children:
   - {fileID: 1797242646}
   - {fileID: 774324234}
-  - {fileID: 1355089862}
   - {fileID: 521185743}
+  - {fileID: 1355089862}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

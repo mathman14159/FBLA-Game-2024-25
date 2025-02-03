@@ -139816,7 +139816,7 @@ MonoBehaviour:
   bullet: {fileID: 2961445007835425953, guid: ef187782e4cccb74585971d5728ef0a8, type: 3}
   bulletTransform: {fileID: 1343279376}
   canFire: 1
-  timeBetweenFiring: 0.3
+  timeBetweenFiring: 0.7
   value: 0
 --- !u!1 &1408278451
 GameObject:
@@ -145262,9 +145262,9 @@ RectTransform:
   m_Children:
   - {fileID: 1797242646}
   - {fileID: 774324234}
-  - {fileID: 531833943}
   - {fileID: 1898817119}
   - {fileID: 1788465066}
+  - {fileID: 531833943}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

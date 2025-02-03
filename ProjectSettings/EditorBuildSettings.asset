@@ -62,4 +62,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 3/Level3_Boss(V3).unity
     guid: 05cf7724b1d91c446990820e822c0809
+  - enabled: 1
+    path: Assets/Scenes/Fake Win Screen.unity
+    guid: 35dd30e7e1c19b341a7637e43c440816
+  - enabled: 1
+    path: Assets/Scenes/Final/Final Boss.unity
+    guid: 0425021afaf0e6a4b96792988ea63f5e
   m_configObjects: {}
