@@ -8,6 +8,7 @@ public class Shooter : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePos;
     public GameObject bullet;
+    public GameObject purifyBullet;
     public Transform bulletTransform;
     public bool canFire;
     private float timer;
@@ -50,6 +51,14 @@ public class Shooter : MonoBehaviour
             
             ArrowKepper.instance.DecreaseArrows(1);
         }
-        
+
+        if (Input.GetMouseButton(1) && canFire && ArrowKepper.instance.currentArrows > 0)
+        {
+            canFire = false;
+            Instantiate(purifyBullet, bulletTransform.position, Quaternion.identity);
+
+            ArrowKepper.instance.DecreaseArrows(1);
+        }
+
     }
 }
