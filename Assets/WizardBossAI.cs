@@ -155,7 +155,7 @@ public class WizardBossAI : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("Win Screen");
+            SceneManager.LoadScene("FinalWin");
             endHealth = Health.instance.currentHealth;
             endScore = ScoreCounter.instance.currentScore;
             PlayerPrefs.SetInt("Health", endHealth);

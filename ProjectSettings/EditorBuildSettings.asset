@@ -68,4 +68,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final/Final Boss.unity
     guid: 0425021afaf0e6a4b96792988ea63f5e
+  - enabled: 1
+    path: Assets/Scenes/Final/FinalWin.unity
+    guid: b22b60ff70e9a3b4dbb4ffa41440e781
+  - enabled: 1
+    path: Assets/Scenes/Level 2/PlayMyGames.unity
+    guid: a1b15a50e55fdcb418efa2ea5f74cf27
   m_configObjects: {}

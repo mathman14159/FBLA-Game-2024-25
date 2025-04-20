@@ -40,11 +40,15 @@ public class saveData2 : MonoBehaviour
             }
             else if (bossScore == 21)
             {
-                SceneManager.LoadScene("Second Level Boss V1");
+                SceneManager.LoadScene("Second Level Boss V3");
             }
 
 
 
         }
+    }
+    public void ChangeScene()
+    {
+         SceneManager.LoadScene("Second Level Boss V3");
     }
 }

@@ -109186,7 +109186,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1840645661}
   - component: {fileID: 1840645660}
-  - component: {fileID: 1840645659}
   m_Layer: 0
   m_Name: BossFight (1)
   m_TagString: Untagged
@@ -109194,21 +109193,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1840645659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840645658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83220056340587e4e903bc39b571be71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endHealth: 0
-  endScore: 0
-  bossScore: 0
 --- !u!61 &1840645660
 BoxCollider2D:
   m_ObjectHideFlags: 0
