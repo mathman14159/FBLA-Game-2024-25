@@ -57,7 +57,7 @@ public class Shooter : MonoBehaviour
             canFire = false;
             Instantiate(purifyBullet, bulletTransform.position, Quaternion.identity);
 
-            ArrowKepper.instance.DecreaseArrows(1);
+            ArrowKepper.instance.DecreaseArrows(10);
         }
 
     }

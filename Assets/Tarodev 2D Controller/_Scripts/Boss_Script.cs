@@ -51,6 +51,15 @@ public class Boss_Script : MonoBehaviour
             StartCoroutine(WaitAndDoSomething());
             
         }
+        if (other.CompareTag("PurifyArrow"))
+        {
+            
+            Destroy(other.gameObject);
+            TakeDamage(1);
+            BossScore.instance.DecreaseBossScore(1);
+            
+            
+        }
     }
      
     

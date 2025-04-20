@@ -25,5 +25,13 @@ public class BossScore : MonoBehaviour
         currentBossScore += v;
         
     }
-    
+    public void DecreaseBossScore(int v)
+    {
+        if (currentBossScore > 0)
+        {
+            currentBossScore -= v;
+        }
+            
+        
+    }
 }
