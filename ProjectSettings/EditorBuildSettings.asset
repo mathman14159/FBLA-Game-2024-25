@@ -74,4 +74,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2/PlayMyGames.unity
     guid: a1b15a50e55fdcb418efa2ea5f74cf27
+  - enabled: 1
+    path: Assets/Scenes/Main Menu 1.unity
+    guid: 9791b59d1a15946429464e21767c5ce0
   m_configObjects: {}
