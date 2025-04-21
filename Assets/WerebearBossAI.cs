@@ -146,6 +146,12 @@ public class WerebearBossAI : MonoBehaviour
             StartCoroutine(WaitAndDoSomething());
 
         }
+        if (other.CompareTag("PurifyArrow"))
+        {
+            
+            Destroy(other.gameObject);
+            TakeDamage(1);
+        }
     }
     private IEnumerator WaitAndDoSomething()
     {

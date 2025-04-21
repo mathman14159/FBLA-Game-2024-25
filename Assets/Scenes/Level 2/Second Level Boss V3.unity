@@ -139855,6 +139855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2961445007835425953, guid: ef187782e4cccb74585971d5728ef0a8, type: 3}
+  purifyBullet: {fileID: 2961445007835425953, guid: 810b0b04a357da9408ddb1568331fba8, type: 3}
   bulletTransform: {fileID: 1343279376}
   canFire: 1
   timeBetweenFiring: 0.7
