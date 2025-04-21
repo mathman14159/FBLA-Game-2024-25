@@ -634,13 +634,13 @@ MonoBehaviour:
     Space Bar to Jump/Double Jump
 
 
-    Mouse and left
-    Click to shoot arrows
+    Left Click to shoot
+    arrows and right click for purify arrows
 
 
-    Areas indicated by Angel Statues will lead to heaven
-    which is the main hub world where you may access all of the hubworlds after being
-    unlocked as well as the shop to purchase arrows
+    Areas indicated by Angel Statues
+    will lead to heaven which is the main hub world where you may access all of the
+    hubworlds after being unlocked as well as the shop to purchase arrows
 
 '
   m_isRightToLeft: 0
@@ -669,8 +669,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
-  m_fontSizeBase: 4
+  m_fontSize: 3.9
+  m_fontSizeBase: 3.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

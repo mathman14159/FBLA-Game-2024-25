@@ -52,12 +52,12 @@ public class Shooter : MonoBehaviour
             ArrowKepper.instance.DecreaseArrows(1);
         }
 
-        if (Input.GetMouseButton(1) && canFire && ArrowKepper.instance.currentArrows > 0)
+        if (Input.GetMouseButton(1) && canFire && ArrowKepper.instance.currentArrows >= 5)
         {
             canFire = false;
             Instantiate(purifyBullet, bulletTransform.position, Quaternion.identity);
 
-            ArrowKepper.instance.DecreaseArrows(10);
+            ArrowKepper.instance.DecreaseArrows(5);
         }
 
     }
